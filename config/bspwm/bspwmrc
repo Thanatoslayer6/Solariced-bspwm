@@ -1,0 +1,43 @@
+#! /bin/sh
+
+#source the colors generated from pywal
+#. "${HOME}/.cache/wal/colors.sh"
+
+#enable polybar and sxhkd
+pgrep -x sxhkd > /dev/null || sxhkd &
+polybar -c ~/.config/polybar/config.ini example -r &
+
+#enable window swallowing on the things I use like documents especially with ranger and shit
+pgrep bspswallow || bspswallow &
+pgrep bspswallowalt || bspswallowalt &
+
+bspc monitor -d I II III IV V VI 
+
+bspc config border_width        1
+bspc config window_gap          0
+bspc config focus_follows_pointer	true
+
+# pywal integration and some border colors.. note the last option...
+
+#bspc config normal_border_color	"$color1"
+#bspc config active_border_color	"$color2"
+#bspc config focused_border_color	"$color15"
+#bspc config presel_border_color 	"$color1"
+
+#############################################################
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# My preferences for apps that I currently use with some external rules for spotify and others to work
+bspc config external_rules_command "$HOME/.config/bspwm/scripts/spotify_wm.sh"
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+# Make settings launchers set to floating
+bspc rule -a Lxappearance state=floating

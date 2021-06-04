@@ -1,0 +1,41 @@
+/**
+ * ROFI Color theme
+ * User: Qball
+ * Copyright: Dave Davenport
+ */
+
+@import "~/.config/rofi/themes/colors/Night.rasi"
+
+window {
+    anchor:     north;
+    location:   north;
+    width:      100%;
+    padding:    2px;
+    children:   [ horibox ];
+}
+
+horibox {
+    orientation: horizontal;
+    children:   [ prompt, textbox-prompt-colon, entry, listview ];
+}
+
+listview {
+    layout:     horizontal;
+    spacing:    10px;
+    lines:      100;
+}
+
+entry {
+    expand:     false;
+    width:      10em;
+}
+
+element {
+    padding: 0px 2px;
+}
+
+ textbox-prompt-colon {                                                
+     expand: false;                                                    
+     margin: 0 0.3em 0em 0em;                                          
+     str: ":";
+ }

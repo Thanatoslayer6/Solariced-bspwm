@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+*{
+	font-family: 'Roboto Mono', monospace;
+}
+
+body {
+	background-color: black;
+	color: white;
+}
+
+#container {
+	position: relative;
+	border: 1px solid lime;
+	margin-top: 8em;
+	margin-left: 20em;
+	height: 350px;
+	width: 700px;
+	display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#timeblock {
+	font-size: 50px;
+	font-family: 'Source Sans Pro', sans-serif;
+	height: 100px;
+	width: 250px;
+	border: 1px solid lime;
+	position: absolute;
+	top: 35px;
+	display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+}
+#ampm {
+	font-size: 25px;
+	position: relative;
+	left: 10px;
+	top: 10px;
+}
+
+#time {
+	font-size: 50px;
+}
+
+#btcprice {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	font-size: 12px;
+	margin: 4px;
+}
+
+#covidcontainer{
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+#totalcases {
+	font-size: 12px;
+	display: flex;
+	margin-left: 10px;
+}
+#activecases {
+	font-size: 12px;
+	display: flex;
+	margin-left: 30px;
+}
+
+#deaths {
+	font-size: 12px;
+	display: flex;
+	margin-left: 30px;
+}
+
+#weather {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	font-size: 12px;
+	margin: 4px;
+}
+
+#textblock {
+	position: absolute;
+	bottom: 70px;
+	height: 100px;
+	width: 400px;
+}
+#quotes {
+	font-size: 14px;
+	display: table;
+	margin: 20px auto;
+	text-align: center;
+}
+
+#author {
+	font-size: 12px;
+	display: table;
+	margin: 10px auto;
+}
